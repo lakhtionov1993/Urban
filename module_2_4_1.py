@@ -11,6 +11,5 @@ for i in range(0, len(numbers)):
     elif len(Primes_Not_Primes) == 1:
         Primes.append(numbers[i])
     Primes_Not_Primes.clear()
-    continue
 print("Primes:", Primes, '''
 ''' "Not_Primes:", Not_Primes)
