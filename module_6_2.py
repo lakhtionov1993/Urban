@@ -18,7 +18,7 @@ class Vehicle:
         return f'{Fore.BLUE}Мощность двигателя:{self.__engine_power}'
 
     def get_color(self):
-        return f'{Fore.BLUE}Цвет:{self.__color}'
+        return f'{Fore.BLUE}Цвет:{Fore.GREEN + self.__color}'
 
     def print_info(self):
         print(self.get_model())
