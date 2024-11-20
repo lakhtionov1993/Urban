@@ -18,7 +18,7 @@ class Vehicle:
         return f'{Fore.BLUE}Мощность двигателя:{self.__engine_power}'
 
     def get_color(self):
-        return f'{Fore.BLUE}Цвет:{Fore.GREEN + self.__color}'
+        return f'{Fore.BLUE}Цвет:{self.__color}'
 
     def print_info(self):
         print(self.get_model())
@@ -28,7 +28,7 @@ class Vehicle:
 
     def set_color(self, new_color):
         if new_color.lower() in self.__COLOR_VARIANTS:
-            self.__color = new_color
+            self.__color = Fore.GREEN + new_color
         else:
             print(f'{Fore.RED}Нельзя сменить цвет на {new_color}')
 
