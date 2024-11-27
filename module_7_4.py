@@ -6,9 +6,11 @@ def party(team1_num, team2_num):
     print('В команде %s участников: %s !' % (team1, team1_num))
     print('Итого сегодня в командах участников: %s и %s !' % (team1_num, team2_num))
 
-def format(score_2, team1_time):
+
+def formats(score_2, team1_time):
     print('Команда {} решила задач: {} !'.format(team2, score_2))
     print('{} решили задачи за {} с !'.format(team2, team1_time))
+
 
 def f_string(score_1, score_2, team1_time, team2_time):
     tasks_total = score_1 + score_2
@@ -25,7 +27,6 @@ def f_string(score_1, score_2, team1_time, team2_time):
     print(f'Сегодня было решено {tasks_total} задач, в среднем по {round(time_awg, 1)} секунды на задачу!')
 
 
-
 party(5, 6)
-format(42, 18015.2)
+formats(42, 18015.2)
 f_string(40, 42, 1552.512, 2153.31451)
