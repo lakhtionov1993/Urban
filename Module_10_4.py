@@ -21,8 +21,8 @@ class Guest(Thread):
 
 class Cafe:
     def __init__(self, *tables: Table):
-        self.tables = tables  # столы в этом кафе
-        self.queue = Queue()  # очередь
+        self.tables = tables 
+        self.queue = Queue()
 
     def is_vacant(self):
         return not any(t.guest for t in self.tables)
@@ -56,19 +56,19 @@ class Cafe:
                         print(f'Стол номер {table.number} свободен')
                         table.guest = None
 
-
-# Создание столов
-tables = [Table(number) for number in range(1, 6)]
-# Имена гостей
-guests_names = [
-'Maria', 'Oleg', 'Vakhtang', 'Sergey', 'Darya', 'Arman',
-'Vitoria', 'Nikita', 'Galina', 'Pavel', 'Ilya', 'Alexandra'
-]
-# Создание гостей
-guests = [Guest(name) for name in guests_names]
-# Заполнение кафе столами
-cafe = Cafe(*tables)
-# Приём гостей
-cafe.guest_arrival(*guests)
-# Обслуживание гостей
-cafe.discuss_guests()
+if __name__ == '__main__':
+    # Создание столов
+    tables = [Table(number) for number in range(1, 6)]
+    # Имена гостей
+    guests_names = [
+    'Maria', 'Oleg', 'Vakhtang', 'Sergey', 'Darya', 'Arman',
+    'Vitoria', 'Nikita', 'Galina', 'Pavel', 'Ilya', 'Alexandra'
+    ]
+    # Создание гостей
+    guests = [Guest(name) for name in guests_names]
+    # Заполнение кафе столами
+    cafe = Cafe(*tables)
+    # Приём гостей
+    cafe.guest_arrival(*guests)
+    # Обслуживание гостей
+    cafe.discuss_guests()
